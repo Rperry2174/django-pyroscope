@@ -1,18 +1,19 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from ride_share.utility.utility import find_nearest_vehicle
 
 class BikeView(APIView):
     """
-    View to list all users in the system.
-
-    * Requires token authentication.
-    * Only admin users are able to access this view.
+    View to order a bike
     """
+
+    def order_bike(self, search_radius):
+        find_nearest_vehicle(search_radius, "bike")
 
     def get(self, request, format=None):
         """
-        Return a list of all users.
+        Order a bike within a certain radius.
         """
-        print("testview is happening")
+        self.order_bike()
         return Response(["Bike view"])
