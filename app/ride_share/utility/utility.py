@@ -26,10 +26,10 @@ def check_driver_availability(n):
 
 def find_nearest_vehicle(n, vehicle):
     print(f"finding nearest {vehicle}")
-    # with pyroscope.tag_wrapper({ "vehicle": vehicle}):
-    #     i = 0
-    #     start_time = time.time()
-    #     while time.time() - start_time < n:
-    #         i += 1
-    #     if vehicle == "car":
-    #         check_driver_availability(n)
+    with pyroscope.tag_wrapper({ "vehicle": vehicle}):
+        i = 0
+        start_time = time.time()
+        while time.time() - start_time < n:
+            i += 1
+        if vehicle == "car":
+            check_driver_availability(n)

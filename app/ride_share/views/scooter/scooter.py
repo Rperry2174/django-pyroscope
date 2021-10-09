@@ -14,5 +14,5 @@ class ScooterView(APIView):
         """
         Order a scooter within a certain radius.
         """
-        self.order_scooter()
+        self.order_scooter(0.3)
         return Response(["Scooter view"])

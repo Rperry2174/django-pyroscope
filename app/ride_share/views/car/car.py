@@ -15,5 +15,5 @@ class CarView(APIView):
         """
         Order a car within a certain radius.
         """
-        self.order_car()
+        self.order_car(0.4)
         return Response(["Car view"])

@@ -15,5 +15,5 @@ class BikeView(APIView):
         """
         Order a bike within a certain radius.
         """
-        self.order_bike()
+        self.order_bike(0.2)
         return Response(["Bike view"])
