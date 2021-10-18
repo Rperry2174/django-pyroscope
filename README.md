@@ -1,13 +1,7 @@
-# Dockerizing Django with Postgres, Gunicorn, and Nginx
-
-## Want to learn how to build this?
-
-Check out the [post](https://testdriven.io/dockerizing-django-with-postgres-gunicorn-and-nginx).
-
-## Want to use this project?
+# Dockerizing Django with Pyroscope, Postgres, Gunicorn, and Nginx
+This is a simple rideshare example that adds Pyroscope to a Django application and uses it to profile various routes
 
 ### Development
-
 Uses the default Django development server.
 
 1. Rename *.env.dev-sample* to *.env.dev*.
